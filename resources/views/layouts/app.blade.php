@@ -249,10 +249,19 @@
               </div>
             </li> --}}
             <li class="nav-item">
-              <a class="nav-link" href="{{route('manageusers')}}">
-                <span class="menu-title">Users</span>
+              <a class="nav-link" data-toggle="collapse" href="#ui-manage" aria-expanded="false" aria-controls="ui-basic" >
+                <span class="menu-title">Manage Users</span>
+                <i class="menu-arrow"></i>
                 <i class="mdi mdi-account-multiple-outline menu-icon"></i>
               </a>
+              <div class="collapse" id="ui-manage">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link"  href="{{route('manageusers')}}">Member</a></li>
+                </ul>
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="#">Doctor</a></li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('admin/setting/1/edit')}}">

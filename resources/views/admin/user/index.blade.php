@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Tables User')   
-   
+
+@section('style')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css" type="text/css">
+@endsection
 @section('content')
 <div class="content-wrapper">
     <div class="page-header">
@@ -19,7 +22,7 @@
             <h4 class="card-title">Users table</h4>
             <p class="card-description"> Data Users <code></code>
             </p>
-            <table class="table table-bordered">
+            <table id="example" class="table table-bordered table-responsive">
               <thead>
                 <tr>
                   <th> # </th>
@@ -46,4 +49,14 @@
       </div>
     </div>
   </div>
+@endsection
+@section('script')
+<script>
+  $(document).ready(function() {
+  $('#example').DataTable();
+  } );
+</script> 
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
 @endsection
