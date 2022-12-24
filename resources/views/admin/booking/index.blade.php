@@ -59,7 +59,7 @@
                     <div class="col-md-2">
                       <select class="form-control" name="end_date">
                         <option value="">dr. Parlidungan Simbolon</option>
-                        <option value="">dr. Farra Y. Ermita, M.Kes</option>
+                        <option value="">dr. Farra Y. Ermita, Yusuf</option>
                       </select>
                     </div>
                     <div class="col-md-2">
