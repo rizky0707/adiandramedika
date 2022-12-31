@@ -25,6 +25,8 @@ use App\Http\Controllers\SettingController;
 
 // Route::get('/', [BookingController::class, 'bookingDefault'])->name('booking');
 Route::get('/', [BookingController::class, 'bookingLanding'])->name('bookingLanding');
+Route::view('/bookingdev', 'landing.bookingdev');
+Route::view('/bookingpromise', 'landing.bookingpromise');
 Route::get('/history', [BookingController::class, 'userLanding'])->name('userLanding')->middleware('auth');
 Route::post('/', [BookingController::class, 'storeBookingLanding'])->name('storeBookingLanding')->middleware('auth');
 Route::get('/result', [BookingController::class, 'showResult'])->name('showResult')->middleware('auth');
@@ -39,6 +41,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/operator/dashboard', [HomeController::class, 'operatorHome'])->name('operatorHome')->middleware('is_admin');
+Route::get('/doctor/dashboard', [HomeController::class, 'doctorHome'])->name('doctorHome')->middleware('is_admin');
 Route::get('operator/booking', [BookingController::class, 'bookingOpr'])->name('bookingOpr');
 Route::get('operator/booking/edit/{id}', [BookingController::class, 'editOpr'])->name('bookingOprEdit');
 Route::put('operator/booking/edit/{booking}', [BookingController::class, 'updateOpr'])->name('updateOpr');

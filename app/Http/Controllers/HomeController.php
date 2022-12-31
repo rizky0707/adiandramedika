@@ -67,6 +67,7 @@ class HomeController extends Controller
         return view('adminHome', compact('bookings', 'bookings_count', 'doctors_count', 'data'));
     }
 
+    
     public function operatorHome()
     {
         $bookings = Booking::whereDate('tanggal', Carbon::today())->get();
@@ -79,5 +80,19 @@ class HomeController extends Controller
         // dd($data);
         $doctors_count = Doctor::all()->count();
         return view('operatorHome', compact('bookings', 'bookings_count', 'doctors_count', 'data'));
+    }
+
+    public function doctorHome()
+    {
+        $bookings = Booking::whereDate('tanggal', Carbon::today())->get();
+        $bookings_count = Booking::all()->count();
+        $bookings_count_favorit_1 = Booking::all()->where('id_category', 1)->count();
+        $bookings_count_favorit_2 = Booking::all()->where('id_category', 2)->count();
+        $bookings_count_favorit_3 = Booking::all()->where('id_category', 3)->count();
+        $data = compact('bookings_count_favorit_1', 'bookings_count_favorit_2', 'bookings_count_favorit_3');
+        // max($data);
+        // dd($data);
+        $doctors_count = Doctor::all()->count();
+        return view('doctorHome', compact('bookings', 'bookings_count', 'doctors_count', 'data'));
     }
 }
