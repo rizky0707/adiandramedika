@@ -27,6 +27,7 @@ use App\Http\Controllers\SettingController;
 Route::get('/', [BookingController::class, 'bookingLanding'])->name('bookingLanding');
 Route::view('/bookingdev', 'landing.bookingdev');
 Route::view('/bookingpromise', 'landing.bookingpromise');
+Route::view('/dashboarduser', 'landing.devui.dashboard-user');
 Route::get('/history', [BookingController::class, 'userLanding'])->name('userLanding')->middleware('auth');
 Route::post('/', [BookingController::class, 'storeBookingLanding'])->name('storeBookingLanding')->middleware('auth');
 Route::get('/result', [BookingController::class, 'showResult'])->name('showResult')->middleware('auth');
