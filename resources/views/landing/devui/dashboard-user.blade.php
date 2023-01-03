@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     
     <title>Dashboard User</title>
+    <style>
+      .hoverbox:hover{
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
@@ -40,18 +45,19 @@
         </div>
       </div>
           <div class="card-body">
-            <p class="card-text font-weight">Reservasi</p>
+            <img src="{{asset('assets/landing/img/event.png')}}" width="25px" alt=""> <a class="card-text font-weight" href="{{url('/dashboarduser')}}">Reservasi</a>
             <hr>
-            <p class="card-text">Notifikasi</p>
+            <img src="{{asset('assets/landing/img/notif.png')}}" width="25px" alt=""> <a class="card-text" href="{{url('/dashboardnotifikasi')}}">Notifikasi</a>
             <hr>
-            <p class="card-text">Laporan</p>
+            <img src="{{asset('assets/landing/img/laporan.png')}}" width="25px" alt=""> <a class="card-text" href="{{url('/dashboardlaporan')}}">Laporan</a>
           </div>
         </div>
 
       </div>
       <div class="col-8">
         <h3>Overview</h3>
-        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+        <a href="" style="text-decoration: none; color:black;">
+        <div class="shadow-sm p-3 mb-5 bg-white rounded hoverbox">
           <div class="row">
             <div class="col-9 col-md-4">
               <div class="row">
@@ -78,6 +84,35 @@
                     <span class="project-status">Kadaluwarsa</span></div></div>
        
       </div>
+      <div class="shadow-sm p-3 mb-5 bg-white rounded hoverbox">
+        <div class="row">
+          <div class="col-9 col-md-4">
+            <div class="row">
+              <div class="col">
+                <h5>Nama Dokter</h5> 
+                <span class="text-h45 text-72 opacity-50">15 Feb 2022</span> 
+                <span class="project-status success ml-2 d-md-none"></span>
+              </div></div> 
+              <div class="row d-md-none">
+                <div class="col-6"><h6 class="text-3c opacity-50">Nominal Donasi</h6> 
+                  <h6><strong>Rp. 10.000,00</strong></h6>
+                </div> 
+                <div class="col-6">
+                  <h6 class="text-3c opacity-50">Tanggal</h6> 
+                  <h6><strong>15 Feb 2022</strong></h6>
+                </div>
+              </div>
+            </div> 
+            <div class="col-2 d-none d-md-block"><h5 class="text-3c opacity-50">Pelayanan</h5> 
+              <b><strong>Rp. 10.000,00</strong></b></div> 
+              <div class="col-2 d-none d-md-block"><h5 class="text-3c opacity-50">Jam</h5> 
+                <b><strong>09.00 - 18.00</strong></b></div> 
+                <div class="col-4 d-none d-md-block"><h5 class="text-3c opacity-50 mb10">Status</h5> 
+                  <span class="project-status">Kadaluwarsa</span></div></div>
+     
+    </div>
+    
+    </a>
     </div>
   </div>
     </div>

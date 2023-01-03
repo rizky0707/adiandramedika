@@ -28,6 +28,9 @@ Route::get('/', [BookingController::class, 'bookingLanding'])->name('bookingLand
 Route::view('/bookingdev', 'landing.bookingdev');
 Route::view('/bookingpromise', 'landing.bookingpromise');
 Route::view('/dashboarduser', 'landing.devui.dashboard-user');
+Route::view('/userdetail', 'landing.devui.user-detail');
+Route::view('/dashboardnotifikasi', 'landing.devui.dashboard-notif');
+Route::view('/dashboardlaporan', 'landing.devui.dashboard-laporan');
 Route::get('/history', [BookingController::class, 'userLanding'])->name('userLanding')->middleware('auth');
 Route::post('/', [BookingController::class, 'storeBookingLanding'])->name('storeBookingLanding')->middleware('auth');
 Route::get('/result', [BookingController::class, 'showResult'])->name('showResult')->middleware('auth');
